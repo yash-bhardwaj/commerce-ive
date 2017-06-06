@@ -1,0 +1,11 @@
+version: '2'
+services:
+  get-myitinerary:
+    image: rhldcmesboot711.na.rccl.com:5000/commerce-ive/get-myitineraries:latest
+    ports:
+      - "9001:9001"
+      - "9000:9000"
+    environment:
+      kafkaaddress: 127.0.0.1:9092
+      CAS_NATIVE_URL: tcp://cassandra:9042/cas_native
+      HTTP_PORT: 9000

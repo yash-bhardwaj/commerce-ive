@@ -1,0 +1,29 @@
+<FindBugsFilter>
+	<Match>
+		<!-- <Class name="~com\.rccl\.cp\.ive\.get\.myitinerary\.api\..*" /> -->
+		<Class name="~com\.rccl\.cp\.ive\..*" />
+		<Method name="equals" />
+		<Bug pattern="NP_METHOD_PARAMETER_TIGHTENS_ANNOTATION" />
+	</Match>
+	<Match>
+		<Class name="~com\.rccl\.cp\.ive\..*\.Immutable.*" />
+		<Bug pattern="DLS_DEAD_LOCAL_STORE" />
+	</Match>
+	<Match>
+		<Class name="~com\.rccl\.cp\.ive\..*\.Immutable.*" />
+		<Bug pattern="SE_BAD_FIELD" />
+	</Match>
+	<Match>
+		<Class name="~com\.rccl\.cp\.ive\..*\.Immutable.*" />
+		<Bug pattern="SE_NO_SERIALVERSIONID" />
+	</Match>
+	<Match>
+		<Class name="com.rccl.cp.ive.api.impl.ConfigurationServiceLocatorModule" />
+		<Bug pattern="URF_UNREAD_FIELD" />
+	</Match>
+	<Match>
+		<Class
+			name="com.rccl.cp.ive.update.bindings.ConfigurationServiceLocatorModule" />
+		<Bug pattern="URF_UNREAD_FIELD" />
+	</Match>
+</FindBugsFilter>

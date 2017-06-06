@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html manifest="manifest.appcache">
+<head>
+
+<script type="text/javascript">
+                     var sampleRequest = {
+		"method": "POST",
+		"cruiseBookingID": "42793",
+		"guestID": "191919",
+		"shipSailDate": "AL20170611",
+		"eventGroupType": "SHIPSCHEDULE",
+		"eventGroupDescription": "Ship Schedule",
+		"eventID": "0",
+		"eventType": "SHOREX",
+		"eventName": "Shore Excursion Test",
+		"eventLocale": "en_US",
+		"eventLocation": {
+			"locationCode": "MIA",
+			"locationType": "PORT",
+			"locationName": "Miami"
+		},
+		"eventStartTime": {
+			"eventDate": "2017-06-12",
+			"eventTime": "09:00",
+			"eventTimeZone": "GMT-5"
+		},
+		"eventEndTime": {
+			"eventDate": "2017-06-12",
+			"eventTime": "12:00",
+			"eventTimeZone": "GMT-5"
+		},
+		"sourceDetail": {
+			"sourceSystemApplicationID": "PCP",
+			"sourceSystemReservationID": "100001",
+			"sourceSystemOrderID": "11111",
+			"sourceSystemExternalOrderID": "",
+			"sourceSystemProductID": "12345",
+			"sourceSystemOfferingID": "12345-01",
+			"sourceSystemProductName": "Beach Tour"
+		},
+		"attendees": [
+			{
+				"cruiseReservationID": "42793",
+				"guestID": "191919",
+				"sailingID": "AL201706-1",
+				"firstName": "Robert",
+				"lastName": "Volante"
+			},
+			{
+				"cruiseReservationID": "42793",
+				"guestID": "202020",
+				"sailingID": "AL20170611",
+				"firstName": "Shih-Chien",
+				"lastName": "Lu"
+			}
+		]
+
+};
+
+window.onbeforeunload = function() {
+    websocket.onclose = function () {}; // disable onclose handler first
+    websocket.close()
+};
+
+		var wsEndpointUrl = "ws://localhost:9000/api/v1/events/commerce_entity/AL20170611_191919_PCP_1234501";
+		//var wsEndpointUrl = "ws://10.16.4.8:10054/api/v1/events/commerce_entity/ABC";
+		      
+         function WebSocketTest()
+         {
+            if ("WebSocket" in window)
+            {
+               
+               // Let us open a web socket
+               var ws = new WebSocket(wsEndpointUrl);
+				
+               ws.onopen = function()
+               {
+                  // Web Socket is connected, send data using send()
+                  ws.send("Hello");
+               };
+				
+               ws.onmessage = function (evt) 
+               { 
+                  var received_msg = evt.data;
+                  alert("Message is received..." + received_msg);
+               };
+				
+               ws.onclose = function()
+               { 
+                  // websocket is closed.
+                  alert("Connection is closed..."); 
+               };
+            }
+            
+            else
+            {
+               // The browser doesn't support WebSocket
+               alert("WebSocket NOT supported by your Browser!");
+            }
+         }
+
+         function WebSocketClose()
+         {
+            if ("WebSocket" in window)
+            {
+    			websocket.onclose = function () {}; // disable onclose handler first
+    			websocket.close()
+            }
+            
+            else
+            {
+               // The browser doesn't support WebSocket
+               alert("WebSocket NOT supported by your Browser!");
+            }
+         }
+
+
+      </script>
+
+</head>
+<body>
+
+	<div id="sse">
+		<a href="javascript:WebSocketTest()">Run WebSocket</a> <BR>&nbsp;
+		<BR> <a href="javascript:WebSocketClose()">Close WebSocket</a>
+	</div>
+
+</body>
+</html>

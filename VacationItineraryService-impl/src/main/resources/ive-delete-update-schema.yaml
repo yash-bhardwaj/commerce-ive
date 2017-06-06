@@ -1,0 +1,534 @@
+swagger: '2.0'
+info:
+  title: Itinerary Vacation Engine Update API
+  description: >-
+    This documentation covers the delete and update apis and their schema model for the Itinerary Vacation Engine. The terminology used here is specific to the IVE domain. It may require domain mapper for other business terminology such as E2K or commerce.
+  version: 1.0.0
+host: 'api.commerce.rccl.com:9000'
+schemes:
+  - http
+  - https
+basePath: /v1
+produces:
+  - application/json
+paths:
+  /events/{sourceSystemPathName}/{sailingID}/{guestID}/{ownerGuestID}/{ownerReservationID}/{sourceSystemApplicationID}/{sourceSystemOfferingID}:
+    delete:
+      summary: This end point delete the given event.
+      description: >-
+        Delete the specific event.
+      parameters:
+        - name: sourceSystemPathName
+          in: path
+          description: >-
+            Source system name in lowercase (E.g commerce / self / dining / cruisecompass)
+          required: true
+          type: string      
+        - name: sailingID
+          in: path
+          description: >-
+            Unique identifier of the sailing (Ship + SailDate (YYYYmmDD). E.g
+            OA20220328
+          required: true
+          type: string
+        - name: guestID
+          in: path
+          description: >-
+             My Unique ID of the guest in the reservation
+          type: number
+          format: int
+          required: true
+        - name: ownerGuestID
+          in: path
+          description: >-
+             My Unique ID of the owner of the reservation
+          type: number
+          format: int
+          required: true
+        - name: ownerReservationID
+          in: path
+          description: >-
+             Unique reservation ID of event owner
+          type: number
+          format: int
+          required: true
+        - name: sourceSystemApplicationID
+          in: path
+          description: >-
+            Unique ID to delete this event
+          type: string
+          required: true
+        - name: sourceSystemOfferingID
+          in: path
+          description: >-
+            Unique ID to delete this event
+          type: string
+          required: true
+      tags:
+        - commerce
+        - dining
+        - cruisecompass
+        - self
+      responses:
+        '200':
+          description: Delete event request is accepted
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ResponseMessage'
+        default:
+          description: Unexpected error
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Error'
+
+  /events/commerce/{sailingID}:
+    post:
+      summary: This end point allow post events.
+      description: >-
+        Post the specific event.
+      parameters:
+        - name: sailingID
+          in: path
+          description: >-
+            Unique identifier of the sailing (Ship + SailDate (YYYYmmDD). E.g
+            OA20220328
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ItineraryEvent'
+      tags:
+        - commerce
+      responses:
+        '200':
+          description: Post event request is accepted
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ResponseMessage'
+        default:
+          description: Unexpected error
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Error'
+
+
+  /events/dining/{sailingID}:
+    post:
+      summary: This end point allow post events.
+      description: >-
+        Post the specific event.
+      parameters:
+        - name: sailingID
+          in: path
+          description: >-
+            Unique identifier of the sailing (Ship + SailDate (YYYYmmDD). E.g
+            OA20220328
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ItineraryEvent'
+      tags:
+        - dining
+      responses:
+        '200':
+          description: Post event request is accepted
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ResponseMessage'
+        default:
+          description: Unexpected error
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Error'
+
+  /events/cruisecompass/{sailingID}:
+    post:
+      summary: This end point allow post events.
+      description: >-
+        Post the specific event.
+      parameters:
+        - name: sailingID
+          in: path
+          description: >-
+            Unique identifier of the sailing (Ship + SailDate (YYYYmmDD). E.g
+            OA20220328
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ItineraryEvent'
+      tags:
+        - cruisecompass
+      responses:
+        '200':
+          description: Post event request is accepted
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ResponseMessage'
+        default:
+          description: Unexpected error
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Error'
+
+  /events/self/{sailingID}:
+    post:
+      summary: This end point allow post events.
+      description: >-
+        Post the specific event.
+      parameters:
+        - name: sailingID
+          in: path
+          description: >-
+            Unique identifier of the sailing (Ship + SailDate (YYYYmmDD). E.g
+            OA20220328
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ItineraryEvent'
+      tags:
+        - self
+      responses:
+        '200':
+          description: Post event request is accepted
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ResponseMessage'
+        default:
+          description: Unexpected error
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Error'
+
+
+  /events/shipschedule/{sailingID}:
+    post:
+      summary: This end point allow post events.
+      description: >-
+        Post the specific event.
+      parameters:
+        - name: sailingID
+          in: path
+          description: >-
+            Unique identifier of the sailing (Ship + SailDate (YYYYmmDD). E.g
+            OA20220328
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Sailing'
+      tags:
+        - shipschedule
+      responses:
+        '200':
+          description: Post event request is accepted
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ResponseMessage'
+        default:
+          description: Unexpected error
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Error'
+
+definitions:
+  LocationTypeENUM:
+    type: string
+    enum:
+      - PORT
+      - CITY
+      - SHIP_VENUE
+      - SHIP
+    description: Type of the location in which a specific activity or product is offered
+  ResponseMessage:
+    type: object
+    description: >-
+      Additional instruction for success.
+    properties:
+      fieldName: 
+        type: string
+        description: The additional key value pair
+      fieldValue:
+        type: string
+        description: The additional key value pair
+  ItineraryEvent:
+    type: object
+    description: >-
+      Personal Itinerary of the given Cruise Reservation and guest. It lists all
+      events scheduled for guests. Events could be based on the activities
+      purchased/scheduled by the shopping transactions or personal appointments
+      created by the guest themselves.
+    properties:
+      cruiseReservationID:
+        type: number
+        format: int
+        description: Unique Reservation ID of the cruise reservation
+      guestID:
+        type: number
+        format: int
+        description: My Unique ID of the guest in the reservation
+      sailingID:
+        type: string
+        description: >-
+            Unique identifier of the sailing (Ship + SailDate (YYYYmmDD). E.g
+            OA20220328
+      eventGroupType: 
+        type: string
+        description: Type of this group (e.g. SHIPSCHEDULE, COMMERCE, CRUISECOMPASS, SELF)
+      eventGroupDescription: 
+        type: string
+        description: Event type description of this group
+      eventID:
+        type: string
+        description: >-
+          System generated event id. Used on further services calls like
+          cancelItineraryEvent
+      eventType:
+        type: string
+        description: >-
+          Event type (actual activity type which generated the itinerary event
+          (DINING, SHOREX, SPA etc)
+      eventName:
+        type: string
+        description: >-
+          Short name or description of the event. Originally created by the user
+          or the source application which created the event.
+      eventLocale:
+        type: string
+        description: language region information in BCP 47 style
+      firstName:
+        type: string
+        description: first name (for support purpose only)
+      lastName:
+        type: string
+        description: last name (for support purpose only)
+      eventLocation:
+        $ref: '#/definitions/EventLocation'
+      eventStartTime:
+        $ref: '#/definitions/EventTime'
+      eventEndTime:
+        $ref: '#/definitions/EventTime'
+      sourceDetail:
+        $ref: '#/definitions/EventSourceDetail'
+      attendees:
+        type: array
+        items:
+          $ref: '#/definitions/EventAttendee'
+  EventSourceDetail:
+    description: >-
+      Source of the specific event. It covers the details like which system
+      generated the event and its meta details
+    properties:
+      sourceSystemApplicationID:
+        type: string
+        description: Original Applicatin ID (E.g COMMERCE / SELF / SHIPSCHEDULE)
+      sourceSystemReservationID:
+        type: string
+        description: >-
+          Unique Reservation ID of the source system which generated this event.
+          Used by the clients later to perform CTA on this event.
+      sourceSystemOrderID:
+        type: string
+        description: >-
+          Unique order ID of the source system which generated this event. Used
+          by the clients later to perform CTA on this event.
+      sourceSystemExternalOrderID:
+        type: string
+        description: >-
+          External order ID of the source system which generated this event.
+          Used by the clients later to perform CTA on this event.
+      sourceSystemProductID:
+        type: string
+        description: >-
+          Unique ID of the product / activity on the source syste. Used to
+          perform CTA.
+      sourceSystemOfferingID:
+        type: string
+        description: >-
+          Unique ID of the product / activity offering on the source system. Used to perform CTA.
+      sourceSystemProductName:
+        type: string
+        description: Product Name coming from the source system.
+  EventAttendee:
+    description: Details of the attendoes of a specific event
+    properties:
+      cruiseReservationID:
+        type: number
+        format: int
+        description: Unique Reservation ID of the cruise reservation
+      guestID:
+        type: number
+        format: int
+        description: Unique  ID of the guest in the reservation
+      sailingID:
+        type: string
+        description: >-
+            Unique identifier of the sailing (Ship + SailDate (YYYYmmDD). E.g
+            OA20220328
+      firstName:
+        type: string
+        description: First name when adding the calendar event
+      lastName:
+        type: string
+        description: Last name when adding the calendar event
+  EventTime:
+    description: Start or End time of the actual  Event
+    properties:
+      eventDate:
+        type: string
+        description: Date of the event (YYYYmmDD format)
+      eventTime:
+        type: string
+        description: Time of the event (HHmm format)
+      eventTimeZone:
+        type: string
+        description: Reserveed for future USE. By default, all the events are on the 'ship time'
+  EventLocation:
+    description: location in which a specific activity or product is offered / happenning
+    properties:
+      locationCode:
+        type: string
+        description: Unique code of a specific location
+      locationType:
+        $ref: '#/definitions/LocationTypeENUM'
+      locationName:
+        type: string
+        description: Name of the location
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string
+        
+  Sailing:
+    type: object
+    description: >-
+      The root aggregate of the sailing information. Sailing is the combincation of ship, sail date, itinerary, and a collection of itinerary days.
+    properties:
+      sailingID:
+        type: string
+        description: >-
+            Unique identifier of the sailing (Ship + SailDate (YYYYmmDD). E.g
+            OA20220328
+      voyageNumber: 
+        type: string
+        description: The E2K voyage number SMVYNO
+      pmsVoyageID: 
+        type: string
+        description: The PMS voyage ID 
+      returnDate: 
+        type: string
+        description: the return date of the sailing SMRTDT 
+      regionCode: 
+        type: string
+        description: The geographic reason code SMGRCD
+      subRegionCode: 
+        type: string
+        description: The sub region code SMREGN
+      colorCode: 
+        type: string
+        description: The color code SMRSST
+      dispatchCode: 
+        type: string
+        description: The dispatch code SMDSCD
+      revenueSailing: 
+        type: boolean
+        description: The revenue sailing falg SMRSST 
+      sailingCurrency: 
+        type: string
+        description: The sailing currency SMCURC
+      charterCode: 
+        type: string
+        description: charter code SMCHCD
+      numberOfDays: 
+        type: integer
+        description: number of days SMNODY 
+      voyageType: 
+        type: string
+        description: voyage type related to interporting SMSLTY 
+      sailingItinerary:
+        $ref: '#/definitions/SailingItinerary'
+  SailingItinerary:
+    type: object
+    description: >-
+      Sailing Itinerary of the given sailing. Contains a collection of itinerary days.
+    properties:
+      sailingItineraryCode:
+        type: string
+        description: >-
+            Itinerary code SMITCD
+      sailingItineraryEffectiveDate:
+        type: string
+        description: >-
+            Itinerary effective date ITEFDT
+      itineraryDay:
+        type: array
+        items:
+          $ref: '#/definitions/ItineraryDay'
+  ItineraryDay:
+    type: object
+    description: >-
+      Itinerary day represents the ICIDYD.
+    properties:
+      dayNumber: 
+        type: integer
+        format: int32
+        description: AWDYNO
+      portCode:
+        type: string
+        description: AWDPTCD
+      arrivalTime:
+        type: string
+        description: AWARTM
+      debarkationTime:
+        type: string
+        description: AWDBTM
+      tethered:
+        type: boolean
+        description: AWTNDK
+      embarkationTime:
+        type: string
+        description: AWDBTM
+      departureTime:
+        type: string
+        description: AWDPTM
+        

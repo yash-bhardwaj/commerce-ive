@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+    "-//Puppy Crawl//DTD Suppressions 1.1//EN"
+    "http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
+
+<suppressions>
+	<suppress files="CommerceEventAttendee\.java" checks="[a-zA-Z0-9]*" />
+	<suppress files="CommerceGuestCalendarEvent\.java" checks="[a-zA-Z0-9]*" />
+	<suppress files="VoyageInfoShipScheduleEvent\.java" checks="[a-zA-Z0-9]*" />
+	<suppress files="ReadsideEventAttendee\.java" checks="[a-zA-Z0-9]*" />
+	<suppress files="ReadsideGuestCalendarEvent\.java" checks="[a-zA-Z0-9]*" />
+</suppressions>
+

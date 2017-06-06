@@ -1,0 +1,150 @@
+{
+	"cruiseBookingID": "42793",
+	"guestID": "191919",
+	"shipSailDate": "AL20170730",
+	"eventGroupType": "COMMERCE",
+	"eventGroupDescription": "Commerce PCP",
+	"eventType": "SHOREX",
+	"eventName": "A Day in the Life of Bob Marley",
+	"eventLocale": "en_US",
+	"firstName": "Dallas",
+	"lastName": "Vachon",
+	"eventLocation": {
+		"locationCode": "FMT",
+		"locationType": "PORT",
+		"locationName": "Falmouth, Jamaica"
+	},
+	"eventStartTime": {
+		"eventDate": "2017-07-30",
+		"eventTime": "09:00",
+		"eventTimeZone": "SHIP_TIME"
+	},
+	"eventEndTime": {
+		"eventDate": "2017-07-30",
+		"eventTime": "12:00",
+		"eventTimeZone": "SHIP_TIME"
+	},
+	"sourceDetail": {
+		"sourceSystemApplicationID": "PCP",
+		"sourceSystemReservationID": "101102",
+		"sourceSystemOrderID": "21212122",
+		"sourceSystemExternalOrderID": "",
+		"sourceSystemProductID": "FY14",
+		"sourceSystemOfferingID": "FY14B",
+		"sourceSystemProductName": "A Day in the Life of Bob Marley"
+	},
+	"attendees": [
+		{
+			"cruiseReservationID": "42793",
+			"guestID": "191919",
+			"sailingID": "AL20170730",
+			"firstName": "Dallas",
+			"lastName": "Vachon"
+		},
+		{
+			"cruiseReservationID": "42793",
+			"guestID": "202020",
+			"sailingID": "AL20170730",
+			"firstName": "Tyesha",
+			"lastName": "Brimmer"
+		},
+		{
+			"cruiseReservationID": "42793",
+			"guestID": "212121",
+			"sailingID": "AL20170730",
+			"firstName": "Quincy",
+			"lastName": "Carlow"
+		},
+		{
+			"cruiseReservationID": "42793",
+			"guestID": "222222",
+			"sailingID": "AL20170730",
+			"firstName": "Else",
+			"lastName": "Laborde"
+		},
+		{
+			"cruiseReservationID": "50094",
+			"guestID": "232323",
+			"sailingID": "AL20170730",
+			"firstName": "Margaret",
+			"lastName": "Piedra"
+		},
+		{
+			"cruiseReservationID": "50094",
+			"guestID": "242424",
+			"sailingID": "AL20170730",
+			"firstName": "Mika",
+			"lastName": "Lizaola"
+		},
+		{
+			"cruiseReservationID": "50094",
+			"guestID": "252525",
+			"sailingID": "AL20170730",
+			"firstName": "Naomi",
+			"lastName": "Malbon"
+		},
+		{
+			"cruiseReservationID": "50094",
+			"guestID": "262626",
+			"sailingID": "AL20170730",
+			"firstName": "Allen",
+			"lastName": "New"
+		},
+		{
+			"cruiseReservationID": "65001",
+			"guestID": "272727",
+			"sailingID": "AL20170730",
+			"firstName": "Jacklyn",
+			"lastName": "Baer"
+		},
+		{
+			"cruiseReservationID": "65001",
+			"guestID": "282828",
+			"sailingID": "AL20170730",
+			"firstName": "Tracey",
+			"lastName": "Mattox"
+		},
+		{
+			"cruiseReservationID": "65001",
+			"guestID": "292929",
+			"sailingID": "AL20170730",
+			"firstName": "Catarina",
+			"lastName": "Ruel"
+		},
+		{
+			"cruiseReservationID": "65001",
+			"guestID": "303030",
+			"sailingID": "AL20170730",
+			"firstName": "Hank",
+			"lastName": "Saville"
+		},
+		{
+			"cruiseReservationID": "72310",
+			"guestID": "313131",
+			"sailingID": "AL20170730",
+			"firstName": "Julee",
+			"lastName": "Blake"
+		},
+		{
+			"cruiseReservationID": "72310",
+			"guestID": "323232",
+			"sailingID": "AL20170730",
+			"firstName": "Grover",
+			"lastName": "Maranto"
+		},
+		{
+			"cruiseReservationID": "72310",
+			"guestID": "333333",
+			"sailingID": "AL20170730",
+			"firstName": "Sima",
+			"lastName": "Brafford"
+		},
+		{
+			"cruiseReservationID": "72310",
+			"guestID": "343434",
+			"sailingID": "AL20170730",
+			"firstName": "Dewayne",
+			"lastName": "Greaver"
+		}
+	]
+}

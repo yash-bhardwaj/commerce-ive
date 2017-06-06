@@ -1,0 +1,115 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.rccl.cp</groupId>
+		<artifactId>commerce-ive-poc</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>integration-test</artifactId>
+
+	<packaging>jar</packaging>
+	<properties>
+		<main.basedir>${project.parent.basedir}</main.basedir>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>VacationItineraryService-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>VacationItineraryStream-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.lightbend.lagom</groupId>
+			<artifactId>lagom-javadsl-testkit_2.11</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.lightbend.lagom</groupId>
+			<artifactId>lagom-javadsl-integration-client_2.11</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.lightbend.lagom</groupId>
+			<artifactId>lagom-logback_2.11</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.lightbend.lagom</groupId>
+			<artifactId>lagom-javadsl-server_2.11</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.lightbend.lagom</groupId>
+			<artifactId>lagom-javadsl-persistence-cassandra_2.11</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.gatling.highcharts</groupId>
+			<artifactId>gatling-charts-highcharts</artifactId>
+			<version>2.2.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.atlassian.oai</groupId>
+			<artifactId>swagger-request-validator-core</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20090211</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.lightbend.lagom</groupId>
+				<artifactId>lagom-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>start</id>
+						<phase>process-test-classes</phase>
+						<goals>
+							<goal>startAll</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>stop</id>
+						<phase>install</phase>
+						<goals>
+							<goal>stopAll</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>2.19.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

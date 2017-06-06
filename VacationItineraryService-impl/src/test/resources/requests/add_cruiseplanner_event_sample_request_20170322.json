@@ -1,0 +1,21 @@
+{
+	"cruiseBookingID": 4967331,
+	"guestID": 957807488,
+	"shipSailDate": "HM20170304",
+	"eventType": "Anita",
+	"eventLocation": {
+		"locationCode": "FLL",
+		"locationType": "PORT",
+		"locationName": "Fort Lauderdale, Florida"
+	},
+	"eventStartTime": {
+		"eventDate": "20170304",
+		"eventTime": "N/A",
+		"eventTimeZone": "SHIP"
+	},
+	"eventEndTime": {
+		"eventDate": "20170304",
+		"eventTime": "1630",
+		"eventTimeZone": "SHIP"
+	}
+}

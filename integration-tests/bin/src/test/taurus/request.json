@@ -1,0 +1,53 @@
+{
+	"cruiseBookingID": "42793",
+	"guestID": "191919",
+	"shipSailDate": "AL20170730",
+	"eventGroupType": "COMMERCE",
+	"eventGroupDescription": "Commerce PCP",
+	"eventID": "0",
+	"eventType": "SHOREX",
+	"eventName": "A Day in the Life of Bob Marley",
+	"eventLocale": "en_US",
+	"firstName": "Robert",
+	"lastName": "Volante",
+	"eventLocation": {
+		"locationCode": "FMT",
+		"locationType": "PORT",
+		"locationName": "Falmouth, Jamaica"
+	},
+	"eventStartTime": {
+		"eventDate": "2018-03-14",
+		"eventTime": "09:00",
+		"eventTimeZone": "SHIP_TIME"
+	},
+	"eventEndTime": {
+		"eventDate": "2018-03-14",
+		"eventTime": "12:00",
+		"eventTimeZone": "SHIP_TIME"
+	},
+	"sourceDetail": {
+		"sourceSystemApplicationID": "PCP",
+		"sourceSystemReservationID": "100001",
+		"sourceSystemOrderID": "11112222",
+		"sourceSystemExternalOrderID": "3567890",
+		"sourceSystemProductID": "FY14",
+		"sourceSystemOfferingID": "FY14B",
+		"sourceSystemProductName": "A Day in the Life of Bob Marley"
+	},
+	"attendees": [
+		{
+			"cruiseReservationID": "42793",
+			"guestID": "191919",
+			"sailingID": "AL20180311",
+			"firstName": "Robert",
+			"lastName": "Volante"
+		},
+		{
+			"cruiseReservationID": "42793",
+			"guestID": "202020",
+			"sailingID": "AL20180311",
+			"firstName": "Shih-Chien",
+			"lastName": "Lu"
+		}
+	]
+}

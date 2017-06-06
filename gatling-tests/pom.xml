@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+     <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+		<groupId>com.rccl.cp</groupId>
+		<artifactId>commerce-ive-poc</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+    <artifactId>gatling-tests</artifactId>
+
+    <properties>
+        <scala-maven-plugin.version>3.2.2</scala-maven-plugin.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.gatling.highcharts</groupId>
+            <artifactId>gatling-charts-highcharts</artifactId>
+            <version>2.2.5</version>
+            <scope>test</scope>
+        </dependency>
+
+         <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.11.11</version>
+        </dependency> 
+        
+        <!-- https://mvnrepository.com/artifact/org.scala-lang/scala-reflect -->
+		<dependency>
+		    <groupId>org.scala-lang</groupId>
+		    <artifactId>scala-reflect</artifactId>
+		    <version>2.11.11</version>
+		</dependency>
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>${scala-maven-plugin.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>io.gatling</groupId>
+                <artifactId>gatling-maven-plugin</artifactId>
+                <version>2.2.4</version>
+                <executions>
+                    <execution>
+                        <id>Simulations</id>
+                        <phase>integration-test</phase>
+                        <configuration>
+                            <configFolder>${project.basedir}/src/test/resources</configFolder>
+                            <dataFolder>${project.basedir}/src/test/resources/data</dataFolder>
+                            <resultsFolder>${project.basedir}/src/test/results</resultsFolder>
+                            <requestBodiesFolder>${project.basedir}/src/test/resources/bodies</requestBodiesFolder>
+                            <simulationClass>commerce.ive.Simulations</simulationClass>
+                        </configuration>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

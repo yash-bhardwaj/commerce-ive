@@ -1,0 +1,65 @@
+{
+	"id": "commerce-ive/update-cruiseplannerevents",
+	"cpus": 0.5,
+	"mem": 1024,
+	"instances": 1,
+	"requirePorts": true,
+	"env": {
+		"CAS_CONTACT_POINT_ONE": "10.16.6.162",
+		"CAS_CONTACT_POINT_TWO": "10.16.4.106",
+		"CAS_CONTACT_POINT_THREE": "10.16.7.47",
+		"CAS_CONTACT_POINTS_PORT": "8042",
+		"CASSANDRA_USERNAME": {
+			"secret": "ive_db_username"
+		},
+		"CASSANDRA_PASSWORD": {
+			"secret": "ive_db_password"
+		},
+		"AKKA_PORT": "2552"
+	},
+	"container": {
+		"type": "DOCKER",
+		"docker": {
+			"image": "rhldcmesboot711.na.rccl.com:5000/commerce-ive/update-cruiseplannerevents:latest",
+			"network": "BRIDGE",
+			"portMappings": [
+				{
+					"containerPort": 9003,
+					"hostPort": 0,
+					"servicePort": 10054
+				}
+			]
+		}
+	},
+	"secrets": {
+		"ive_db_password": {
+			"source": "ive_db_password"
+		},
+		"ive_db_username": {
+			"source": "ive_db_username"
+		}
+	},
+	"labels": {
+		"HAPROXY_GROUP": "external",
+		"HAPROXY_0_VHOST": "dev1.mesos.rccl.com",
+		"HAPROXY_0_HTTP_BACKEND_PROXYPASS_PATH": "/ive-update/"
+	},
+	"portDefinitions": [
+		{
+			"port": 10054,
+			"protocol": "tcp",
+			"labels": {
+				
+			}
+		}
+	],
+	"healthChecks": [
+		{
+			"protocol": "TCP",
+			"gracePeriodSeconds": 30,
+			"intervalSeconds": 20,
+			"timeoutSeconds": 10,
+			"maxConsecutiveFailures": 5
+		}
+	]
+}

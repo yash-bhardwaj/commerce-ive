@@ -1,0 +1,2 @@
+testCase,httpStatusCode,sailingID,cruiseReservationID,guestID
+Success,200,OA20171001,101,10001

@@ -1,0 +1,261 @@
+[
+	{
+		"cruiseBookingID": 4967331,
+		"guestID": 957807488,
+		"shipSailDate": "HM20170304",
+		"eventGroupType": "DINING",
+		"eventGroupDescription": "Dining Events",
+		"eventType": "SPECIALTY_DINING",
+		"eventLocale": "en_US",
+		"eventName": "Dinner at Chops Grill",
+		"eventLocation": {
+			"locationCode": "CHOP",
+			"locationType": "DINING_FACILITY",
+			"locationName": "Chops Grill"
+		},
+		"eventStartTime": {
+			"eventDate": "2017-07-04",
+			"eventTime": "20:00",
+			"eventTimeZone": "SHIP"
+		},
+		"eventEndTime": {
+			"eventDate": "2017-07-04",
+			"eventTime": "21:30",
+			"eventTimeZone": "SHIP"
+		},
+		"sourceDetail": {
+			"sourceSystemApplicationID": "SILVERWHERE",
+			"sourceSystemReservationID": "3567890957807488",
+			"sourceSystemOrderID": null,
+			"sourceSystemExternalOrderID": "3567890",
+			"sourceSystemProductID": "CHOPDINNER",
+			"sourceSystemOfferingID": "CHOPDINNER01",
+			"sourceSystemProductName": "Chops Grill"
+		},
+		"attendees": [
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 191919,
+				"sailingID": "HM20170304",
+				"firstName": "Shih-Chien",
+				"lastName": "Lu"
+			},
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 202020,
+				"sailingID": "HM20170304",
+				"firstName": "Robert",
+				"lastName": "Volante"
+			},
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 292929,
+				"sailingID": "HM20170304",
+				"firstName": "Ravi",
+				"lastName": "Narayan"
+			},
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 101010,
+				"sailingID": "HM20170304",
+				"firstName": "john",
+				"lastName": "wick"
+			}
+		]
+	},
+	{
+		"cruiseBookingID": 4967332,
+		"guestID": 957807489,
+		"shipSailDate": "HM20170305",
+		"eventGroupType": "DINING",
+		"eventGroupDescription": "Dining Events",
+		"eventType": "SPECIALTY_DINING",
+		"eventID": "0",
+		"eventLocale": "en_US",
+		"eventName": "Dinner at Chops Grill",
+		"eventLocation": {
+			"locationCode": "CHOP",
+			"locationType": "DINING_FACILITY",
+			"locationName": "Chops Grill"
+		},
+		"eventStartTime": {
+			"eventDate": "2017-07-04",
+			"eventTime": "20:00",
+			"eventTimeZone": "SHIP"
+		},
+		"eventEndTime": {
+			"eventDate": "2017-07-04",
+			"eventTime": "21:30",
+			"eventTimeZone": "SHIP"
+		},
+		"sourceDetail": {
+			"sourceSystemApplicationID": "SILVERWHERE",
+			"sourceSystemReservationID": "3567890957807489",
+			"sourceSystemOrderID": null,
+			"sourceSystemExternalOrderID": "3567891",
+			"sourceSystemProductID": "CHOPDINNER",
+			"sourceSystemOfferingID": "CHOPDINNER01",
+			"sourceSystemProductName": "Chops Grill"
+		},
+		"attendees": [
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 191919,
+				"sailingID": "HM20170304",
+				"firstName": "Shih-Chien",
+				"lastName": "Lu"
+			},
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 202020,
+				"sailingID": "HM20170304",
+				"firstName": "Robert",
+				"lastName": "Volante"
+			},
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 292929,
+				"sailingID": "HM20170304",
+				"firstName": "Ravi",
+				"lastName": "Narayan"
+			},
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 101010,
+				"sailingID": "HM20170304",
+				"firstName": "john",
+				"lastName": "wick"
+			}
+		]
+	},
+	{
+		"cruiseBookingID": 4967332,
+		"guestID": 957807411,
+		"shipSailDate": "HM20170305",
+		"eventGroupType": "DINING",
+		"eventGroupDescription": "Dining Events",
+		"eventType": "SPECIALTY_DINING",
+		"eventID": "0",
+		"eventLocale": "en_US",
+		"eventName": "Dinner at Chops Grill",
+		"eventLocation": {
+			"locationCode": "CHOP",
+			"locationType": "DINING_FACILITY",
+			"locationName": "Chops Grill"
+		},
+		"eventStartTime": {
+			"eventDate": "2017-07-05",
+			"eventTime": "20:00",
+			"eventTimeZone": "SHIP"
+		},
+		"eventEndTime": {
+			"eventDate": "2017-07-05",
+			"eventTime": "21:30",
+			"eventTimeZone": "SHIP"
+		},
+		"sourceDetail": {
+			"sourceSystemApplicationID": "SILVERWHERE",
+			"sourceSystemReservationID": "3567890957807411",
+			"sourceSystemOrderID": null,
+			"sourceSystemExternalOrderID": "3567888",
+			"sourceSystemProductID": "CHOPDINNER",
+			"sourceSystemOfferingID": "CHOPDINNER01",
+			"sourceSystemProductName": "Chops Grill"
+		},
+		"attendees": [
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 191919,
+				"sailingID": "HM20170304",
+				"firstName": "Shih-Chien",
+				"lastName": "Lu"
+			},
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 202020,
+				"sailingID": "HM20170304",
+				"firstName": "Robert",
+				"lastName": "Volante"
+			},
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 292929,
+				"sailingID": "HM20170304",
+				"firstName": "Ravi",
+				"lastName": "Narayan"
+			},
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 101010,
+				"sailingID": "HM20170304",
+				"firstName": "john",
+				"lastName": "wick"
+			}
+		]
+	},
+	{
+		"cruiseBookingID": 4967322,
+		"guestID": 957807412,
+		"shipSailDate": "HM20170306",
+		"eventGroupType": "DINING",
+		"eventGroupDescription": "Dining Events",
+		"eventType": "SPECIALTY_DINING",
+		"eventID": "0",
+		"eventLocale": "en_US",
+		"eventName": "Dinner at Chops Grill",
+		"eventLocation": {
+			"locationCode": "CHOP",
+			"locationType": "DINING_FACILITY",
+			"locationName": "Chops Grill"
+		},
+		"eventStartTime": {
+			"eventDate": "2017-07-06",
+			"eventTime": "20:00",
+			"eventTimeZone": "SHIP"
+		},
+		"eventEndTime": {
+			"eventDate": "2017-07-06",
+			"eventTime": "21:30",
+			"eventTimeZone": "SHIP"
+		},
+		"sourceDetail": {
+			"sourceSystemApplicationID": "SILVERWHERE",
+			"sourceSystemReservationID": "3567890957807412",
+			"sourceSystemOrderID": null,
+			"sourceSystemExternalOrderID": "3567889",
+			"sourceSystemProductID": "CHOPDINNER",
+			"sourceSystemOfferingID": "CHOPDINNER01",
+			"sourceSystemProductName": "Chops Grill"
+		},
+		"attendees": [
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 191919,
+				"sailingID": "HM20170304",
+				"firstName": "Shih-Chien",
+				"lastName": "Lu"
+			},
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 202020,
+				"sailingID": "HM20170304",
+				"firstName": "Robert",
+				"lastName": "Volante"
+			},
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 292929,
+				"sailingID": "HM20170304",
+				"firstName": "Ravi",
+				"lastName": "Narayan"
+			},
+			{
+				"cruiseReservationID": 4967331,
+				"guestID": 101010,
+				"sailingID": "HM20170304",
+				"firstName": "john",
+				"lastName": "wick"
+			}
+		]
+	}
+]

@@ -1,0 +1,1 @@
+[2017-06-02 11:06:58,940] TRACE Controller 0 epoch 1 received response {error_code=0} for a request sent to broker knoldus-Lenovo-G50-80:9092 (id: 0 rack: null) (state.change.logger)

@@ -1,0 +1,53 @@
+{
+
+		"cruiseBookingID": "${cruiseBookingID}",
+		"guestID": "${guestID}",
+		"shipSailDate": "AL20170611",
+		"eventGroupType": "SHIPSCHEDULE",
+		"eventGroupDescription": "Ship Schedule",
+		"eventID": "0",
+		"eventType": "SHOREX",
+		"eventName": "Shore Excursion Test",
+		"eventLocale": "en_US",
+		"eventLocation": {
+			"locationCode": "MIA",
+			"locationType": "PORT",
+			"locationName": "Miami"
+		},
+		"eventStartTime": {
+			"eventDate": "2017-06-12",
+			"eventTime": "09:00",
+			"eventTimeZone": "GMT-5"
+		},
+		"eventEndTime": {
+			"eventDate": "2017-06-12",
+			"eventTime": "11:00",
+			"eventTimeZone": "GMT-5"
+		},
+		"sourceDetail": {
+			"sourceSystemApplicationID": "PCP",
+			"sourceSystemReservationID": "100001",
+			"sourceSystemOrderID": "11111",
+			"sourceSystemExternalOrderID": "",
+			"sourceSystemProductID": "12345",
+			"sourceSystemOfferingID": "1234501",
+			"sourceSystemProductName": "Beach Tour"
+		},
+		"attendees": [
+			{
+				"cruiseReservationID": "42793",
+				"guestID": "191919",
+				"sailingID": "AL201706-1",
+				"firstName": "Robert",
+				"lastName": "Volante"
+			},
+			{
+				"cruiseReservationID": "42793",
+				"guestID": "202020",
+				"sailingID": "AL20170611",
+				"firstName": "Shih-Chien",
+				"lastName": "Lu"
+			}
+		]
+
+}

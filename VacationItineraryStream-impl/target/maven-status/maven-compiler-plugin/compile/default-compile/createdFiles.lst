@@ -1,0 +1,15 @@
+com/rccl/cp/ive/update/cruisecompass/api/impl/ImmutableCruiseCompassEventState$1.class
+com/rccl/cp/ive/update/dining/api/impl/ImmutableRemoveDiningEventCommand$1.class
+com/rccl/cp/ive/update/cruisecompass/api/impl/ImmutableCruiseCompassEventUpdated$1.class
+com/rccl/cp/ive/update/cruisecompass/api/impl/ImmutableRemoveCruiseCompassEventCommand$1.class
+com/rccl/cp/ive/update/cruiseplanner/api/impl/ImmutableCruisePlannerEventUpdated$1.class
+com/rccl/cp/ive/update/dining/api/impl/ImmutableDiningEventRemoved$1.class
+com/rccl/cp/ive/update/cruiseplanner/api/impl/ImmutableUpdateCruisePlannerEventCommand$1.class
+com/rccl/cp/ive/update/dining/api/impl/ImmutableDiningEventUpdated$1.class
+com/rccl/cp/ive/update/dining/api/impl/ImmutableDiningEventState$1.class
+com/rccl/cp/ive/update/dining/api/impl/ImmutableUpdateDiningEventCommand$1.class
+com/rccl/cp/ive/update/cruisecompass/api/impl/ImmutableCruiseCompassEventRemoved$1.class
+com/rccl/cp/ive/update/cruiseplanner/api/impl/ImmutableRemoveCruisePlannerEventCommand$1.class
+com/rccl/cp/ive/update/cruisecompass/api/impl/ImmutableUpdateCruiseCompassEventCommand$1.class
+com/rccl/cp/ive/update/cruiseplanner/api/impl/ImmutableCruisePlannerEventRemoved$1.class
+com/rccl/cp/ive/update/cruiseplanner/api/impl/ImmutableCruisePlannerEventState$1.class

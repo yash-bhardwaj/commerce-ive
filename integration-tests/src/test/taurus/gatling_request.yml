@@ -1,0 +1,246 @@
+execution: 
+  - 
+    concurrency: 2
+    executor: gatling
+    iterations: 1
+    ramp-up: 10s
+    scenario: cruiseCompassEvents ##running1,
+  - 
+    concurrency: 2
+    executor: gatling
+    iterations: 1
+    ramp-up: 10s
+    scenario: selfEvents ##running1,
+  - 
+    concurrency: 2
+    executor: gatling
+    iterations: 1
+    ramp-up: 10s
+    scenario: cruisePlannerEvents   ##running1,
+  - 
+    concurrency: 2
+    executor: gatling
+    iterations: 1
+    ramp-up: 10s
+    scenario: getMyHealthCheck  ##running1,
+  - 
+    concurrency: 2
+    executor: gatling
+    iterations: 1
+    ramp-up: 10s
+    scenario: diningEvents  ##running1,
+  - 
+    concurrency: 2
+    executor: gatling
+    iterations: 1
+    ramp-up: 10s
+    scenario: getMyItenaryHealthCheck ##running
+  - 
+    concurrency: 2
+    executor: gatling
+    iterations: 1
+    ramp-up: 10s
+    scenario: getMyItinerary
+
+scenarios: 
+  getMyHealthCheck: 
+    default-address: "http://localhost:9000"
+    simulation: GetMyHealthCheckSimulation
+    timeout: 3000
+    headers: 
+      Accept: "text/plain; charset=utf-8"
+      Accept-Encoding: "text/plain; charset=utf-8"
+      Accept-Language: "en-US,en;q=0.5"
+      DNT: 1
+      User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0"
+    requests: 
+      - 
+        assert: 
+          - 
+            contains: 
+              - 200
+            subject: http-code
+        label: GetMyHealthCheck
+        method: GET
+        url: /api/v1/events/commerce/health
+        
+  getMyItenaryHealthCheck: 
+    default-address: "http://localhost:9000"
+    simulation: GetMyItenaryHealthCheckSimulation
+    timeout: 3000
+    headers: 
+      Accept: "text/plain; charset=utf-8"
+      Accept-Encoding: "text/plain; charset=utf-8"
+      Accept-Language: "en-US,en;q=0.5"
+      DNT: 1
+      User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0"
+    requests: 
+      - 
+        assert: 
+          - 
+            contains: 
+              - 200
+            subject: http-code
+        label: GetMyItenaryHealthCheck
+        method: GET
+        url: /api/v1/myItineraries/health
+  getMyItinerary: 
+    default-address: "http://localhost:9000"
+    simulation: GetMyItinerarySimulation
+    timeout: 3000
+    headers: 
+      Accept: "application/json; charset=utf-8"
+      Accept-Encoding: "application/json; charset=utf-8"
+      Accept-Language: "en-US,en;q=0.5"
+      DNT: 1
+      User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0"
+    requests: 
+      - 
+        assert: 
+          - 
+            contains: 
+              - 200
+            subject: http-code
+        label: GetMyItinerary
+        method: GET
+        url: /api/v1/myItineraries/AL20170730/42793/191919
+  cruiseCompassEvents: 
+    default-address: "http://localhost:9000"
+    simulation: CruiseCompassEventsSimulation
+    timeout: 3000
+    headers: 
+      Accept: "application/json; charset=utf-8"
+      Accept-Encoding: "application/json; charset=utf-8"
+      Accept-Language: "en-US,en;q=0.5"
+      Content-Type: "application/json"
+      DNT: 1
+      User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0"
+    requests: 
+      - 
+        label: EventsCruiseCompassDelete
+        method: DELETE
+        url: /api/v1/events/cruisecompass/AL20170730/191919/191919/42793/PCP/FY14B
+        timeout: 3000
+        assert: 
+          - 
+            contains: 
+              - 200
+            subject: http-code
+      -
+        body-file: request.json
+        label: EventsCruiseCompassUpdate
+        method: POST
+        url: /api/v1/events/cruisecompass/AL20170730
+        timeout: 3000
+        assert: 
+          - 
+            contains: 
+              - 200
+            subject: http-code
+
+  cruisePlannerEvents: 
+    default-address: "http://localhost:9000"
+    simulation: CruisePlannerEventsSimulation
+    timeout: 3000
+    headers: 
+      Accept: "application/json; charset=utf-8"
+      Accept-Encoding: "application/json; charset=utf-8"
+      Accept-Language: "en-US,en;q=0.5"
+      Content-Type: "application/json"
+      DNT: 1
+      User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0"
+    requests: 
+      -
+        label: RemoveCruisePlannerEvents
+        method: DELETE
+        url: /api/v1/events/commerce/AL20170730/191919/191919/42793/PCP/FY14B
+        timeout: 3000
+        assert: 
+          - 
+            contains: 
+              - 200
+            subject: http-code
+      -
+        body-file: request.json
+        label: UpdateCruisePlannerEvents
+        method: POST
+        url: /api/v1/events/commerce/AL20170730
+        timeout: 3000
+        assert: 
+          - 
+            contains: 
+              - 200
+            subject: http-code
+      
+  diningEvents: 
+    default-address: "http://localhost:9000"
+    simulation: DiningEventsSimulation
+    timeout: 3000
+    headers: 
+      Accept: "application/json; charset=utf-8"
+      Accept-Encoding: "application/json; charset=utf-8"
+      Accept-Language: "en-US,en;q=0.5"
+      Content-Type: "application/json"
+      DNT: 1
+      User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0"
+    requests: 
+      -
+        label: RemoveDiningEvents
+        method: DELETE
+        url: /api/v1/events/dining/AL20170730/191919/191919/42793/PCP/FY14B
+        timeout: 3000
+        assert: 
+          - 
+            contains: 
+              - 200
+            subject: http-code
+      -
+        body-file: request.json
+        label: UpdateDiningEvents
+        method: POST
+        url: /api/v1/events/dining/AL20170730
+        timeout: 3000
+        assert: 
+          - 
+            contains: 
+              - "Bad parameter"
+            subject: body
+          - 
+            contains: 
+              - 200
+            subject: http-code
+      
+
+  selfEvents: 
+    default-address: "http://localhost:9000"
+    simulation: SelfEventsSimulation
+    timeout: 3000
+    headers: 
+      Accept: "application/json; charset=utf-8"
+      Accept-Encoding: "application/json; charset=utf-8"
+      Accept-Language: "en-US,en;q=0.5"
+      Content-Type: "application/json"
+      DNT: 1
+      User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0"
+    requests:
+      - 
+        label: RemoveSelfEvents
+        method: DELETE
+        url: /api/v1/events/self/AL20170730/191919/191919/42793/PCP/FY14B
+        timeout: 3000
+        assert:
+          - 
+            contains: 
+              - 200
+            subject: http-code 
+      -
+        body-file: request.json
+        label: UpdateSelfEvents
+        method: POST
+        url: /api/v1/events/self/AL20170730
+        timeout: 3000
+        assert:
+          - 
+            contains: 
+              - 200
+            subject: http-code

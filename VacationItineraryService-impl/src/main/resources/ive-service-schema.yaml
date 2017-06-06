@@ -1,0 +1,247 @@
+swagger: '2.0'
+info:
+  title: Guest Vacation & Itinerary API
+  description: >-
+    This documentation covers all apis and their schema model for the Itinerary Vacation Engine. The terminology used here is specific to the IVE domain. It may require domain mapper for other business terminology such as E2K or commerce.
+  version: 1.0.0
+##host: 'api.commerce.rccl.com:9000'
+host: 'localhost:9000'
+schemes:
+  - http
+  - https
+basePath: /api/v1
+produces:
+  - application/json
+paths:
+  /myItineraries/{sailingID}/{cruiseReservationID}/{guestID}:
+    get:
+      summary: This end point returns all personal itineraries of the guest.
+      description: >-
+        Every personal itineries can contain multiple `ItineraryEventGroup`. The ship schedule event group contains the seaport and their arrival and departure time. Guest can manage personal event group for their own activities.  The product booking event group and the cruise compass event group are managed by the commerce engine. `eventGroupType` is used to identify the type of the itinerary.
+      parameters:
+        - name: sailingID
+          in: path
+          description: >-
+            Unique identifier of the sailing (Ship + SailDate (YYYYmmDD). E.g
+            OA20220328
+          required: true
+          type: string
+        - name: cruiseReservationID
+          in: path
+          description: Unique cruise reservation id
+          required: true
+          type: number
+          format: int
+        - name: guestID
+          in: path
+          description: guest ID within the cruise reservation
+          required: true
+          type: number
+          format: int
+      tags:
+        - My Itineraries
+      responses:
+        '200':
+          description: MyItinerary object, which contains list of calendars for the given guest
+          schema:
+            $ref: '#/definitions/MyItinerary'
+        default:
+          description: Unexpected error
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Error'
+definitions:
+  LocationTypeENUM:
+    type: string
+    enum:
+      - PORT
+      - CITY
+      - SHIP_VENUE
+      - SHIP
+    description: Type of the location in which a specific activity or product is offered
+  MyItinerary:
+    type: object
+    description: >-
+      Personal Itinerary of the given Cruise Reservation and guest. It lists all
+      events scheduled for guests. Events could be based on the activities
+      purchased/scheduled by the shopping transactions or personal appointments
+      created by the guest themselves.
+    properties:
+      cruiseReservationID:
+        type: number
+        format: int
+        description: Unique Reservation ID of the cruise reservation
+      guestID:
+        type: number
+        format: int
+        description: My Unique ID of the guest in the reservation
+      sailingID:
+        type: string
+        description: >-
+            Unique identifier of the sailing (Ship + SailDate (YYYYmmDD). E.g
+            OA20220328
+      firstName:
+        type: string
+        description: My first name when adding the calendar event
+      lastName:
+        type: string
+        description: My last name when adding the calendar event
+      itineraryEventGroups:
+        type: array
+        items:
+          $ref: '#/definitions/ItineraryEventGroup'
+      links:
+        type: array
+        items:
+          $ref: '#/definitions/Link'
+          
+  ItineraryEventGroup:
+    type: object
+    description: Grouping of the same type of itinerary event
+    properties:
+      eventGroupType: 
+        type: string
+        description: Type of this group (e.g. SHIPSCHEDULE, COMMERCE, CRUISECOMPASS, SELF)
+      eventGroupDescription: 
+        type: string
+        description: Event type description of this group
+      itineraryEvents:
+        type: array
+        items:
+          $ref: '#/definitions/ItineraryEvent'
+  ItineraryEvent:
+    type: object
+    description: >-
+      Personal Itinerary of the given Cruise Reservation and guest. It lists all
+      events scheduled for guests. Events could be based on the activities
+      purchased/scheduled by the shopping transactions or personal appointments
+      created by the guest themselves.
+    properties:
+      eventID:
+        type: string
+        description: >-
+          System generated event id. Used on further services calls like
+          cancelItineraryEvent
+      eventType:
+        type: string
+        description: >-
+          Event type (actual activity type which generated the itinerary event
+          (DINING, SHOREX, SPA etc)
+      eventName:
+        type: string
+        description: >-
+          Short name or description of the event. Originally created by the user
+          or the source application which created the event.
+      eventLocale:
+        type: string
+        description: language region information in BCP 47 style
+      eventLocation:
+        $ref: '#/definitions/EventLocation'
+      eventStartTime:
+        $ref: '#/definitions/EventTime'
+      eventEndTime:
+        $ref: '#/definitions/EventTime'
+      sourceDetail:
+        $ref: '#/definitions/EventSourceDetail'
+      attendees:
+        type: array
+        items:
+          $ref: '#/definitions/EventAttendee'
+  EventSourceDetail:
+    description: >-
+      Source of the specific event. It covers the details like which system
+      generated the event and its meta details
+    properties:
+      sourceSystemApplicationID:
+        type: string
+        description: Original Applicatin ID (E.g COMMERCE / SELF / SHIPSCHEDULE)
+      sourceSystemReservationID:
+        type: string
+        description: >-
+          Unique Reservation ID of the source system which generated this event.
+          Used by the clients later to perform CTA on this event.
+      sourceSystemOrderID:
+        type: string
+        description: >-
+          Unique order ID of the source system which generated this event. Used
+          by the clients later to perform CTA on this event.
+      sourceSystemExternalOrderID:
+        type: string
+        description: >-
+          External order ID of the source system which generated this event.
+          Used by the clients later to perform CTA on this event.
+      sourceSystemProductID:
+        type: string
+        description: >-
+          Unique ID of the product / activity on the source syste. Used to
+          perform CTA.
+      sourceSystemOfferingID:
+        type: string
+        description: >-
+          Unique ID of the product / activity offering on the source system. Used to perform CTA.
+      sourceSystemProductName:
+        type: string
+        description: Product Name coming from the source system.
+  EventAttendee:
+    description: Details of the attendoes of a specific event
+    properties:
+      cruiseReservationID:
+        type: number
+        format: int
+        description: Unique Reservation ID of the cruise reservation
+      guestID:
+        type: number
+        format: int
+        description: Unique  ID of the guest in the reservation
+      sailingID:
+        type: string
+        description: >-
+            Unique identifier of the sailing (Ship + SailDate (YYYYmmDD). E.g
+            OA20220328
+      firstName:
+        type: string
+        description: First name when adding the calendar event
+      lastName:
+        type: string
+        description: Last name when adding the calendar event
+  EventTime:
+    description: Start or End time of the actual  Event
+    properties:
+      eventDate:
+        type: string
+        description: Date of the event (YYYYmmDD format)
+      eventTime:
+        type: string
+        description: Time of the event (HHmm format)
+      eventTimeZone:
+        type: string
+        description: Reserveed for future USE. By default, all the events are on the 'ship time'
+  EventLocation:
+    description: location in which a specific activity or product is offered / happenning
+    properties:
+      locationCode:
+        type: string
+        description: Unique code of a specific location
+      locationType:
+        $ref: '#/definitions/LocationTypeENUM'
+      locationName:
+        type: string
+        description: Name of the location
+  Link:
+    type: object
+    properties:
+      rel:
+        type: string
+      href:
+        type: string
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string

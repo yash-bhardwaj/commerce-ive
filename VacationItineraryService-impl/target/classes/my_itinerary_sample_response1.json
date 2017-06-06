@@ -1,0 +1,359 @@
+{
+	"cruiseReservationID": 4967331,
+	"guestID": 957807488,
+	"sailingID": "HM20170304",
+	"firstName": "Anita",
+	"lastName": "Fennell",
+	"itineraryEventGroups": [
+		{
+			"eventGroupType": "SHIPSCHEDULE",
+			"eventGroupDescription": "SHIPSCHEDULE",
+			"itineraryEvents": [
+				{
+					"eventID": "1000000011111111",
+					"eventType": "SHIPSCHEDULE",
+					"eventName": "Fort Lauderdale, Florida",
+					"eventLocale": "en-US",
+					"eventLocation": {
+						"locationCode": "FLL",
+						"locationType": "PORT",
+						"locationName": "Fort Lauderdale, Florida"
+					},
+					"eventStartTime": {
+						"eventDate": "20170304",
+						"eventTime": "N/A",
+						"eventTimeZone": "SHIP"
+					},
+					"eventEndTime": {
+						"eventDate": "20170304",
+						"eventTime": "1630",
+						"eventTimeZone": "SHIP"
+					},
+					"sourceDetail": {
+						"sourceSystemApplicationID": "SHIPSCHEDULE",
+						"sourceSystemReservationID": "0",
+						"sourceSystemOrderID": "0",
+						"sourceSystemExternalOrderID": "0",
+						"sourceSystemProductID": "07W195",
+						"sourceSystemOfferingID": "0",
+						"sourceSystemProductName": "7 Night Western Caribbean Cruise"
+					},
+					"attendees": []
+				},
+				{
+					"eventID": "1000000011111112",
+					"eventType": "SHIPSCHEDULE",
+					"eventName": "Charlotte Amalie, St. Thomas",
+					"eventLocale": "en-US",
+					"eventLocation": {
+						"locationCode": "STT",
+						"locationType": "PORT",
+						"locationName": "Charlotte Amalie, St. Thomas"
+					},
+					"eventStartTime": {
+						"eventDate": "20170307",
+						"eventTime": "700",
+						"eventTimeZone": "SHIP"
+					},
+					"eventEndTime": {
+						"eventDate": "20170307",
+						"eventTime": "1630",
+						"eventTimeZone": "SHIP"
+					},
+					"sourceDetail": {
+						"sourceSystemApplicationID": "SHIPSCHEDULE",
+						"sourceSystemReservationID": "0",
+						"sourceSystemOrderID": "0",
+						"sourceSystemExternalOrderID": "0",
+						"sourceSystemProductID": "07W195",
+						"sourceSystemOfferingID": "0",
+						"sourceSystemProductName": "7 Night Western Caribbean Cruise"
+					},
+					"attendees": []
+				},
+				{
+					"eventID": "1000000011111113",
+					"eventType": "SHIPSCHEDULE",
+					"eventName": "Philipsburg, St. Maarten",
+					"eventLocale": "en-US",
+					"eventLocation": {
+						"locationCode": "SXM",
+						"locationType": "PORT",
+						"locationName": "Philipsburg, St. Maarten"
+					},
+					"eventStartTime": {
+						"eventDate": "20170308",
+						"eventTime": "800",
+						"eventTimeZone": "SHIP"
+					},
+					"eventEndTime": {
+						"eventDate": "20170308",
+						"eventTime": "1700",
+						"eventTimeZone": "SHIP"
+					},
+					"sourceDetail": {
+						"sourceSystemApplicationID": "SHIPSCHEDULE",
+						"sourceSystemReservationID": "0",
+						"sourceSystemOrderID": "0",
+						"sourceSystemExternalOrderID": "0",
+						"sourceSystemProductID": "07W195",
+						"sourceSystemOfferingID": "0",
+						"sourceSystemProductName": "7 Night Western Caribbean Cruise"
+					},
+					"attendees": []
+				},
+				{
+					"eventID": "1000000011111114",
+					"eventType": "SHIPSCHEDULE",
+					"eventName": "Nassau, Bahamas",
+					"eventLocale": "en-US",
+					"eventLocation": {
+						"locationCode": "NAS",
+						"locationType": "PORT",
+						"locationName": "Nassau, Bahamas"
+					},
+					"eventStartTime": {
+						"eventDate": "20170310",
+						"eventTime": "1200",
+						"eventTimeZone": "SHIP"
+					},
+					"eventEndTime": {
+						"eventDate": "20170310",
+						"eventTime": "2000",
+						"eventTimeZone": "SHIP"
+					},
+					"sourceDetail": {
+						"sourceSystemApplicationID": "SHIPSCHEDULE",
+						"sourceSystemReservationID": "0",
+						"sourceSystemOrderID": "0",
+						"sourceSystemExternalOrderID": "0",
+						"sourceSystemProductID": "07W195",
+						"sourceSystemOfferingID": "0",
+						"sourceSystemProductName": "7 Night Western Caribbean Cruise"
+					},
+					"attendees": []
+				},
+				{
+					"eventID": "1000000011111115",
+					"eventType": "SHIPSCHEDULE",
+					"eventName": "Fort Lauderdale, Florida",
+					"eventLocale": "en-US",
+					"eventLocation": {
+						"locationCode": "FLL",
+						"locationType": "PORT",
+						"locationName": "Fort Lauderdale, Florida"
+					},
+					"eventStartTime": {
+						"eventDate": "20170311",
+						"eventTime": "630",
+						"eventTimeZone": "SHIP"
+					},
+					"eventEndTime": {
+						"eventDate": "20170311",
+						"eventTime": "N/A",
+						"eventTimeZone": "SHIP"
+					},
+					"sourceDetail": {
+						"sourceSystemApplicationID": "SHIPSCHEDULE",
+						"sourceSystemReservationID": "0",
+						"sourceSystemOrderID": "0",
+						"sourceSystemExternalOrderID": "0",
+						"sourceSystemProductID": "07W195",
+						"sourceSystemOfferingID": "0",
+						"sourceSystemProductName": "7 Night Western Caribbean Cruise"
+					},
+					"attendees": []
+				}
+			]
+		},
+		{
+			"eventGroupType": "COMMERCE",
+			"eventGroupDescription": "COMMERCE",
+			"itineraryEvents": [
+				{
+					"eventID": "100000002687427300",
+					"eventType": "SHOREX",
+					"eventName": "Tortola Dolphin Encounter",
+					"eventLocale": "en-US",
+					"eventLocation": {
+						"locationCode": "STT",
+						"locationType": "PORT",
+						"locationName": "Charlotte Amalie, St. Thomas"
+					},
+					"eventStartTime": {
+						"eventDate": "20170307",
+						"eventTime": "1000",
+						"eventTimeZone": "SHIP"
+					},
+					"eventEndTime": {
+						"eventDate": "20170307",
+						"eventTime": "1630",
+						"eventTimeZone": "SHIP"
+					},
+					"sourceDetail": {
+						"sourceSystemApplicationID": "COMMERCE",
+						"sourceSystemReservationID": "100000002772784417",
+						"sourceSystemOrderID": "10000002238182183",
+						"sourceSystemExternalOrderID": "10000002238182183",
+						"sourceSystemProductID": "10000008383843209",
+						"sourceSystemOfferingID": "100000002687427300",
+						"sourceSystemProductName": "Tortola Dolphin Encounter"
+					},
+					"attendees": [
+						{
+							"cruiseReservationID": 4967331,
+							"guestID": 957807496,
+							"sailingID": "HM20170304",
+							"firstName": "Patricia",
+							"lastName": "Stewart"
+						},
+						{
+							"cruiseReservationID": 4967331,
+							"guestID": 957807488,
+							"sailingID": "HM20170304",
+							"firstName": "Anita",
+							"lastName": "Fennell"
+						}
+					]
+				},
+				{
+					"eventID": "1000000026874221555",
+					"eventType": "DINING",
+					"eventName": "Dinner at Chops",
+					"eventLocale": "en-US",
+					"eventLocation": {
+						"locationCode": "CHOP",
+						"locationType": "SHIP_VENUE",
+						"locationName": "Chops Steakhouse"
+					},
+					"eventStartTime": {
+						"eventDate": "20170307",
+						"eventTime": "1800",
+						"eventTimeZone": "SHIP"
+					},
+					"eventEndTime": {
+						"eventDate": "20170307",
+						"eventTime": "1930",
+						"eventTimeZone": "SHIP"
+					},
+					"sourceDetail": {
+						"sourceSystemApplicationID": "COMMERCE",
+						"sourceSystemReservationID": "10000000277278435",
+						"sourceSystemOrderID": "100000022381856456",
+						"sourceSystemExternalOrderID": "100000022381856456",
+						"sourceSystemProductID": "10000008383847853",
+						"sourceSystemOfferingID": "100000002687429993",
+						"sourceSystemProductName": "Dinner at Chops"
+					},
+					"attendees": [
+						{
+							"cruiseReservationID": 4967331,
+							"guestID": 957807496,
+							"sailingID": "HM20170304",
+							"firstName": "Patricia",
+							"lastName": "Stewart"
+						},
+						{
+							"cruiseReservationID": 4967331,
+							"guestID": 957807488,
+							"sailingID": "HM20170304",
+							"firstName": "Anita",
+							"lastName": "Fennell"
+						}
+					]
+				},
+				{
+					"eventID": "100000002191920193",
+					"eventType": "SHOW",
+					"eventName": "Stand Up Comedy Show",
+					"eventLocale": "en-US",
+					"eventLocation": {
+						"locationCode": "ROYAL_HM",
+						"locationType": "SHIP_VENUE",
+						"locationName": "Royal Theatre"
+					},
+					"eventStartTime": {
+						"eventDate": "20170307",
+						"eventTime": "2000",
+						"eventTimeZone": "SHIP"
+					},
+					"eventEndTime": {
+						"eventDate": "20170307",
+						"eventTime": "2130",
+						"eventTimeZone": "SHIP"
+					},
+					"sourceDetail": {
+						"sourceSystemApplicationID": "COMMERCE",
+						"sourceSystemReservationID": "100000002381029175",
+						"sourceSystemOrderID": "100000038910381891",
+						"sourceSystemExternalOrderID": "100000012988349881",
+						"sourceSystemProductID": "100000002382817282",
+						"sourceSystemOfferingID": "1000000011344663242",
+						"sourceSystemProductName": "Stand Up Comedy Show"
+					},
+					"attendees": [
+						{
+							"cruiseReservationID": 4967331,
+							"guestID": 957807488,
+							"sailingID": "HM20170304",
+							"firstName": "Anita",
+							"lastName": "Fennell"
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventGroupType": "CRUISECOMPASS",
+			"eventGroupDescription": "CRUISECOMPASS",
+			"itineraryEvents": [
+				{
+					"eventID": "100000002687582910",
+					"eventType": "CRUISECOMPASS",
+					"eventName": "Belly Flop Contest",
+					"eventLocale": "en-US",
+					"eventLocation": {
+						"locationCode": "STT",
+						"locationType": "SHIP_VENUE",
+						"locationName": "Main Pool"
+					},
+					"eventStartTime": {
+						"eventDate": "20170308",
+						"eventTime": "1000",
+						"eventTimeZone": "SHIP"
+					},
+					"eventEndTime": {
+						"eventDate": "20170308",
+						"eventTime": "1100",
+						"eventTimeZone": "SHIP"
+					},
+					"sourceDetail": {
+						"sourceSystemApplicationID": "CRUISECOMPASS",
+						"sourceSystemReservationID": "100000002772819363",
+						"sourceSystemOrderID": "10000002238018169",
+						"sourceSystemExternalOrderID": "10000002238018169",
+						"sourceSystemProductID": "10000008383191019",
+						"sourceSystemOfferingID": "1000000026817194018",
+						"sourceSystemProductName": "Belly Flop Contest"
+					},
+					"attendees": [
+						{
+							"cruiseReservationID": 4967331,
+							"guestID": 957807496,
+							"sailingID": "HM20170304",
+							"firstName": "Patricia",
+							"lastName": "Stewart"
+						},
+						{
+							"cruiseReservationID": 4967331,
+							"guestID": 957807488,
+							"sailingID": "HM20170304",
+							"firstName": "Anita",
+							"lastName": "Fennell"
+						}
+					]
+				}
+			]
+		}
+	]
+}

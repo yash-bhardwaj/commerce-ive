@@ -1,0 +1,4 @@
+[2017-06-05 02:10:34,459] TRACE Controller 0 epoch 3 received response {error_code=0} for a request sent to broker knoldus-Lenovo-G50-80:9092 (id: 0 rack: null) (state.change.logger)
+[2017-06-05 02:11:15,999] TRACE Controller 0 epoch 4 received response {error_code=0} for a request sent to broker knoldus-Lenovo-G50-80:9092 (id: 0 rack: null) (state.change.logger)
+[2017-06-05 02:11:50,218] TRACE Controller 0 epoch 5 received response {error_code=0} for a request sent to broker knoldus-Lenovo-G50-80:9092 (id: 0 rack: null) (state.change.logger)
+[2017-06-05 02:12:19,270] TRACE Controller 0 epoch 6 received response {error_code=0} for a request sent to broker knoldus-Lenovo-G50-80:9092 (id: 0 rack: null) (state.change.logger)
